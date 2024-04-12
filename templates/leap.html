@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: skyblue;
+            padding: 20px;
+        }
+        h1 {
+            color: black;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: green;
+            margin-bottom: 20px;
+        }
+        h3 {
+            color: red;
+            margin-bottom: 20px;
+        }
+
+    </style>
+</head>
+<body>
+<h1>   Welcome to Leap Year Portal</h1>
+{% if year|divisibleby:4 %}
+    {% if year|divisibleby:100 %}
+        {% if year|divisibleby:400 %}
+            <h2>{{year}} is a leap year</h2>
+        {%else%}
+            <h3>{{year}} is not a leap year</h3>
+        {%endif%}
+    {%else%}
+        <h2>{{year}} is a leap year</h2>
+    {%endif%}
+{%else%}
+    <h3>{{year}} is a not leap year</h3>
+{%endif%}
+</body>
+</html>

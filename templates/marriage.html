@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: skyblue;
+            padding: 20px;
+        }
+        h1 {
+            color: black;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: green;
+            margin-bottom: 20px;
+        }
+        h3 {
+            color: red;
+            margin-bottom: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+<h1>welcome to marriage portal</h1>
+{% if gender == "Male" %}
+    {% if age > 21 %}
+        <h2>you are eligible for marriage</h2>
+    {% else %}
+        <h3>you are not eligible for marriage</h3>
+    {% endif %}
+{% elif gender == "Female" %}
+    {% if age > 18 %}
+        <h2>you are eligible for marriage</h2>
+    {% else %}
+        <h3>you are not eligible for marriage</h3>
+    {% endif %}
+{% else %}
+    <h1>not possible to check</h1>
+{% endif %}
+</body>
+</html>
